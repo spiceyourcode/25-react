@@ -1,4 +1,6 @@
+
 .wrapper{
+    height: 80vh;
     width: 50%;
     margin: 5% auto;    
 }
@@ -31,11 +33,10 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    flex-flow: column;
+    flex-flow: row;
 }
 .controls button{
     padding: 12px;
     border-radius: 30px;
     border: none;
-    
 }
