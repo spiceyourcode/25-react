@@ -1,0 +1,41 @@
+.wrapper{
+    width: 50%;
+    margin: 5% auto;    
+}
+.accordian{
+    width: 100%;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+}
+.dataitem{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin:20px;
+}
+
+.title{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-flow: column;
+}
+.answer{
+    padding: 10px;
+    margin-top: -10px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-flow: column;
+}
+.controls button{
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    
+}
