@@ -1,4 +1,4 @@
-import "./styles.css";
+import styles from  "./styles.module.css";
 import { useState } from "react";
 
 function RandomColor() {

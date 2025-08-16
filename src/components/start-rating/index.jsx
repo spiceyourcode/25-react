@@ -1,6 +1,7 @@
 import { FaRegStar } from 'react-icons/fa';
-import './style.css'
+import styles from './style.module.css';
 import { useState } from 'react';
+
 function StarRating({noOfStars=5}) {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
@@ -22,7 +23,7 @@ function StarRating({noOfStars=5}) {
                     index = index + 1
                     return <FaRegStar
                         key={index}
-                        className={index <= hover || index <= rating ? "active" : "inactive"}
+                        className={index <= hover || index <= rating ? styles.active : styles.inactive}
                         onClick={() => handleClick(index)}
                         onMouseMove={() => handleMouseEnter(index)}
                         onMouseLeave={() => handleMouseLeave()}
@@ -33,4 +34,4 @@ function StarRating({noOfStars=5}) {
         </div>
     )
 }
-export default StarRating
+export default StarRating;
