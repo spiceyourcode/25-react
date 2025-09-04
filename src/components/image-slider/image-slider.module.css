@@ -1,39 +1,70 @@
-.container{
-    position: relative;
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-    width: 600px;
-    height: 450px;
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
 }
-.current-image{
-    border-radius: 0.5rem;
-    box-shadow: 0px 0px 7px #666;
-    width: 100%;
-    height: 100%;
-    
-}
-.arrow{
-    position:absolute;
-    width: 2rem;
-    height: 2rem;
-    color: #fff;
-    filter: drop-shadow(0px 0px 5px #555);
-    align-items: center;
-}
-.arrow-left{
-    left: 1rem;
-}
-.arrow-right{
-    right: 1rem;
 
+.current-image {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 7px #666;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.circle-indicator{
-    background-color: #ffff;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    margin: 0 0.2rem;
+
+.arrow {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  filter: drop-shadow(0px 0px 5px #555);
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.circle-indicators {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.circle-indicator {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.circle-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.active {
+  background-color: #ffffff !important;
+  transform: scale(1.2);
 }

@@ -22,31 +22,54 @@ function ImageSlider(props) {
       }
     } catch (e) {
       setErrorMsg(e.message);
+      setLoading(false);
     }
   }
+
   useEffect(() => {
     if (props.url !== "") fetchImages(props.url);
   }, [props.url]);
+
+  function handlePrevious() {
+    setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
+  }
+
+  function handleNext() {
+    setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
+  }
+
   if (loading) return <p>Loading...</p>;
   if (errorMsg) return <p>{errorMsg}</p>;
 
   return (
-    <div className="container">
-      <BsArrowLeftCircleFill onClick={() => setCurrentSlide(currentSlide - 1)} className="arrow arrow-left" />
-      {images &&
-        images.length > 0 &&
-        images.map((image) => (
-          <img className="image" src={image.download_url} key={image.id} />
+    <div className={styles.container}>
+      <BsArrowLeftCircleFill 
+        onClick={handlePrevious} 
+        className={`${styles.arrow} ${styles['arrow-left']}`} 
+      />
+      
+      {images && images.length > 0 && (
+        <img 
+          className={styles['current-image']} 
+          src={images[currentSlide].download_url} 
+          alt={`Slide ${currentSlide + 1}`} 
+        />
+      )}
+      
+      <BsArrowRightCircleFill 
+        onClick={handleNext} 
+        className={`${styles.arrow} ${styles['arrow-right']}`} 
+      />
+      
+      <div className={styles['circle-indicators']}>
+        {images && images.length > 0 && images.map((_, index) => (
+          <button 
+            key={index}
+            className={`${styles['circle-indicator']} ${currentSlide === index ? styles.active : ''}`}
+            onClick={() => setCurrentSlide(index)}
+          ></button>
         ))}
-      <BsArrowRightCircleFill onClick={() => setCurrentSlide(currentSlide + 1)} className="arrow arrow-right" />
-      <span className="circle-indicators">
-        {images && images.length
-          ? images.map((_, index) => (
-            <button className="current-indicator" onClick={() => setCurrentSlide(index)} key={index}></button>
-
-          ))
-          : null}
-      </span>
+      </div>
     </div>
   );
 }
