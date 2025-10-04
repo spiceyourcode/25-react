@@ -1,4 +1,4 @@
- const sidebarData = [
+ const menus = [
   {
     title: "Dashboard",
     path: "/dashboard",
@@ -34,4 +34,4 @@
     ],
   },
 ];
-export default sidebarData;
+export default menus;

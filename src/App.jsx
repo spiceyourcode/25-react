@@ -4,7 +4,7 @@ import StarRating from "./components/start-rating";
 import ImageSlider from "./components/image-slider";
 import LoadMoreData from "./components/load-more-data"
 import TreeView from "./components/tree-view";
-import sidebarData from "./components/tree-view/data";
+import menus from "./components/tree-view/data";
 function App() {
   return (
     <>
@@ -20,7 +20,7 @@ function App() {
       />  
       <LoadMoreData/>
       */}
-      <TreeView menus={sidebarData} />
+      <TreeView menus={menus} />
     </>
   );
 }

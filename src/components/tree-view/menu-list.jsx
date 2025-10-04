@@ -1,6 +1,6 @@
 import MenuItem from "./menu-item";
 
-function MenuList({ list = [] }) {
+function MenuList({ list=[] }) {
     return (
         <ul>
         {list && list.length
