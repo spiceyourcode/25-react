@@ -1,7 +1,9 @@
 import { useState } from "react";
 import MenuList from "./menu-list";
+import styles from './Tree-view.module.css'
 
 function MenuItem({ item }) {
+  // Object allows independent toggling multiple items in nesed items 
   const [displayCurrentChildren, setDisplayCurrentChildren] = useState({});
 
   const handleToggleChildren = (getCurrentTitle) => {
@@ -14,7 +16,7 @@ function MenuItem({ item }) {
   };
 
   return (
-    <li>
+    <li className={styles['list-item']}>
       <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
         <p>
           {item.title}
