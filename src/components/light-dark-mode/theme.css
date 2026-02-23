@@ -13,7 +13,7 @@
 
 .light-dark-mode{
     background-color: var(--background);
-    height: 200px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
