@@ -1,9 +1,9 @@
 import Tabs from "./tabs";
-
+import "./tabs.css";
 function TabsTest(){
 
-    function handleChange(){
-        
+    function handleChange(currentTabIndex){
+        console.log(currentTabIndex );
     }
     const tabs =[
         {
