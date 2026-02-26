@@ -10,6 +10,7 @@ import LightDarkMode from "./components/light-dark-mode";
 import ScrollIndicator from "./components/scroll-indicator";
 import Tabs from "./components/custom-tabs/tabs";
 import TabsTest from "./components/custom-tabs/tab-test";
+import Modaltest from "./components/custom-modal-popup/modal-test";
 function App() {
   return (
     <>
@@ -28,8 +29,9 @@ function App() {
       <QRCodeGenerator/>
       <LightDarkMode/>
       <ScrollIndicator/>
-      */}
       <TabsTest/>
+      */}
+     <Modaltest/>
     </>
   );
 }
