@@ -30,8 +30,8 @@ function App() {
       <LightDarkMode/>
       <ScrollIndicator/>
       <TabsTest/>
-      */}
      <Modaltest/>
+      */}
     </>
   );
 }
