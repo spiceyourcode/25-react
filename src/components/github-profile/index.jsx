@@ -8,9 +8,13 @@ export default function GitHubProfileFinder() {
         const response = await fetch(`https://api.github.com/users/${userName}`)
         const data = await response.json()
         setProfile(data)
+        console.log(profile)
     }
     return (
         <div className="profile-container">
+            <div>
+                <p style={{ fontSize: "20px", fontWeight: "bold" }}>Enter a github username and find the profile!</p>
+            </div>
             <div className="search-container">
                 <div className="input-wrapper">
                     <input
@@ -29,6 +33,8 @@ export default function GitHubProfileFinder() {
                         <img className="avatar" src={profile.avatar_url} />
                         <div className="name">{profile.name}</div>
                         <div className="bio">{profile.bio}</div>
+                        <div className="repos">Total Repositories: {profile.public_repos}</div>
+
                     </div>
                 ) : null
             }

@@ -12,6 +12,7 @@ import Tabs from "./components/custom-tabs/tabs";
 import TabsTest from "./components/custom-tabs/tab-test";
 import ModalTest from "./components/custom-modal-popup/modal-test";
 import GitHubProfileFinder from "./components/github-profile";
+import SearchAutocomplete from "./components/search-autocomplete";
 function App() {
   return (
     <>
@@ -31,9 +32,10 @@ function App() {
       <LightDarkMode/>
       <ScrollIndicator/>
       <TabsTest/>
-      <GitHubProfileFinder/>
-      */}
       <ModalTest />
+      <GitHubProfileFinder />
+      */}
+      <SearchAutocomplete />
     </>
   );
 }
