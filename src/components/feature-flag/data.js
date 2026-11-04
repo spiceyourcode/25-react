@@ -1,8 +1,8 @@
 const dummyApiResponse = {
   showLightAndDarkMode: false,
-  showTicTacToeBoeard: true,
-  showRandomColorGenerator: true,
-  showAccordion: false,
+  showTicTacToeBoard: true,
+  showRandomColor: true,
+  showAccordion: true,
   showTreeReview: true,
 };
 function featureFlagsDataServiceCall() {
